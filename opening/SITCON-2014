@@ -1,0 +1,171 @@
+#!/bin/bash
+
+function typewriter () {
+
+	text="$1"
+	delay=${2-0.06}
+
+	for i in $(seq 0 $(expr length "${text}")); do
+		echo -n "${text:$i:1}"
+		sleep ${delay}
+	done
+
+	echo
+}
+
+echo -n "Checking configuration files"
+typewriter ...... 0.4
+echo
+
+if [ ! -n "$var" ]; then
+
+	echo -e "\t場務組缺少設定檔 場務.conf"
+	sleep 0.5
+	echo -e "\t線路組缺少設定檔 線路.conf"
+	sleep 0.5
+
+	exit 1
+fi
+
+cd Conf/SITCON/2014/
+
+clear
+echo "Project info"
+echo "==="
+echo
+echo "* First commit"
+echo -n "$ "
+typewriter 'git rev-list --parents HEAD | egrep "^[a-f0-9]{40}$" | xargs git log'
+sleep 0.7
+git rev-list --parents HEAD | egrep "^[a-f0-9]{40}$" | xargs git log
+
+sleep 3
+clear
+
+echo "* Contributors"
+echo -n "$ "
+typewriter "git log --format='%aN' | sort -u"
+sleep 1
+
+echo
+echo "Project Owner"
+echo ===
+echo - 學生計算機年會
+echo - 中研院 資創中心 自由軟體鑄造場
+sleep 0.5
+
+echo
+echo
+echo "Co-owner"
+echo ===
+echo - 教育部 資訊軟體人才培育計畫
+
+sleep 2
+clear
+
+
+echo
+echo "Sponsor"
+echo ===
+sleep 0.5
+echo "- 華禎有限公司"
+echo ""
+sleep 0.5
+echo "- 祐生研究基金會"
+echo ""
+sleep 0.5
+echo "- KKTIX 售票亭"
+echo ""
+sleep 0.5
+echo "- justfont 就是字"
+
+sleep 2
+clear
+
+for i in member.*; do
+	clear
+	cat $i
+	sleep 2
+done
+
+clear
+
+echo "More info: http://sitcon.org"
+sleep 0.5
+
+echo
+echo
+
+echo "Initialization completed!"
+echo
+sleep 2
+
+echo "等等！！ 有防火牆！！"
+echo
+sleep 2
+
+echo "防火牆很難入侵 破解需要一點時間"
+typewriter ...... 0.4
+echo
+echo
+
+winps1='C:\Users\user>'
+
+echo -n $winps1
+typewriter 'ping -n'
+sleep 0.5
+echo '必須為選項 -n 提供值。'
+echo
+sleep 0.8
+
+echo -n $winps1
+typewriter 'ping -r'
+sleep 0.5
+echo '必須為選項 -r 提供值。'
+echo
+sleep 0.8
+
+echo -n $winps1
+typewriter 'confj4ing'
+sleep 0.5
+echo "'confj4ing' 不是內部或外部命令、可執行的程式或批次檔。"
+echo
+sleep 0.8
+
+echo -n $winps1
+typewriter 'confing'
+sleep 0.5
+echo "'confing' 不是內部或外部命令、可執行的程式或批次檔。"
+echo
+sleep 0.8
+
+echo -n $winps1
+typewriter 'hkiuyrdg'
+sleep 0.5
+echo "'hkiuyrdg' 不是內部或外部命令、可執行的程式或批次檔。"
+echo
+sleep 0.8
+
+echo -n $winps1
+typewriter 'm,lhfghfdx48478'
+sleep 0.5
+echo "'m' 不是內部或外部命令、可執行的程式或批次檔。"
+echo
+sleep 0.8
+
+echo -n $winps1
+sleep 2
+clear
+
+echo
+echo
+echo Success
+echo
+echo
+sleep 2
+
+echo 喔耶 成功惹 開始吧XD
+sleep 2
+
+cd ../../../slide
+google-chrome index.html

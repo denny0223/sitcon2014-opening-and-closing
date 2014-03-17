@@ -1,0 +1,1051 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>SITCON 2014 Opening</title>
+  <style type="text/css">
+    body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #222;
+  background-color: #f7f7f7;
+  font-size: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+}
+
+.slide-content {
+  width: 800px;
+  height: 600px;
+  overflow: hidden;
+  margin: 80px auto 0 auto;
+  padding: 30px;
+
+  font-weight: 200;
+  font-size: 200%;
+  line-height: 1.375;
+}
+
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.arrow {
+  width: 0; height: 0;
+  border: 30px solid #333;
+  float: left;
+  margin-right: 30px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.prev {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+
+  border-left-width: 0;
+  border-right-width: 50px;
+}
+
+.next {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+
+  border-left-width: 50px;
+  border-right-width: 0;
+}
+
+.prev:hover {
+  border-right-color: #888;
+  cursor: pointer;
+}
+
+.next:hover {
+  border-left-color: #888;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 300%;
+  line-height: 1.2;
+  text-align: center;
+  margin: 170px 0 0;
+}
+
+h2 {
+  font-size: 100%;
+  line-height: 1.2;
+  margin: 5px 0;
+  text-align: center;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 140%;
+  line-height: 1.2;
+  border-bottom: 1px solid #aaa;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+ul {
+  padding: 20px 0 0 60px;
+  font-weight: 200;
+  line-height: 1.375;
+}
+
+.author h1 {
+  font-size: 170%;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.author h3 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 95%;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: #44a4dd;
+}
+
+a:hover {
+  color: #66b5ff;
+}
+
+pre {
+  font-size: 60%;
+  line-height: 1.3;
+}
+
+.progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 3px;
+  background-color: #b4b4b4;
+
+  -webkit-transition: width 0.05s ease-out;
+  -moz-transition: width 0.05s ease-out;
+  -o-transition: width 0.05s ease-out;
+  transition: width 0.05s ease-out;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 850px) {
+
+  body {
+    font-size: 70%;
+  }
+
+  .slide-content {
+    width: auto;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h1 {
+    margin-top: 120px;
+  }
+
+  .prev, .prev:hover {
+    border-right-color: rgba(135, 135, 135, 0.5);
+  }
+
+  .next, .next:hover {
+    border-left-color: rgba(135, 135, 135, 0.5);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 50%;
+    overflow: hidden;
+  }
+
+  .slide-content {
+    padding: 10px;
+    margin-top: 10px;
+    height: 340px;
+  }
+
+  h1 {
+    margin-top: 50px;
+  }
+
+  ul {
+    padding-left: 25px;
+  }
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+  }
+
+  @page {
+    size: letter;
+  }
+
+  .hidden {
+    display: inline;
+  }
+
+  html {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  body {
+    margin: 0 auto !important;
+    border: 0;
+    padding: 0;
+    float: none !important;
+    overflow: visible;
+    background: none !important;
+    font-size: 52%;
+  }
+
+  .progress, .controls {
+    display: none;
+  }
+
+  .slide {
+    position: static;
+  }
+
+  .slide-content {
+    border: 1px solid #222;
+    margin-top: 0;
+    margin-bottom: 40px;
+    height: 3.5in;
+    overflow: visible;
+  }
+
+  .slide:nth-child(even) {
+    /* 2 slides per page */
+    page-break-before: always;
+  }
+}
+
+/*
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+*/
+
+code, pre {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  overflow: auto;
+  padding: 6px 10px;
+}
+
+code {
+  padding: 0 5px;
+}
+
+pre>code {
+  margin: 0; padding: 0;
+  border: none;
+  background: transparent;
+}
+
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .javadoc {
+  color: #998;
+}
+
+pre .keyword,
+pre .css .rule .keyword,
+pre .winutils,
+pre .javascript .title,
+pre .nginx .title,
+pre .subst,
+pre .request,
+pre .status {
+  color: #333;
+  font-weight: bold
+}
+
+pre .number,
+pre .hexcolor,
+pre .ruby .constant {
+  color: #099;
+}
+
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula {
+  color: #d14
+}
+
+pre .title,
+pre .id {
+  color: #900;
+  font-weight: bold
+}
+
+pre .javascript .title,
+pre .lisp .title,
+pre .clojure .title,
+pre .subst {
+  font-weight: normal
+}
+
+pre .class .title,
+pre .haskell .type,
+pre .vhdl .literal,
+pre .tex .command {
+  color: #458;
+  font-weight: bold
+}
+
+pre .tag,
+pre .tag .title,
+pre .rules .property,
+pre .django .tag .keyword {
+  color: #000080;
+  font-weight: normal
+}
+
+pre .attribute,
+pre .variable,
+pre .lisp .body {
+  color: #008080
+}
+
+pre .regexp {
+  color: #009926
+}
+
+pre .class {
+  color: #458;
+  font-weight: bold
+}
+
+pre .symbol,
+pre .ruby .symbol .string,
+pre .lisp .keyword,
+pre .tex .special,
+pre .prompt {
+  color: #990073
+}
+
+pre .built_in,
+pre .lisp .title,
+pre .clojure .built_in {
+  color: #0086b3
+}
+
+pre .preprocessor,
+pre .pi,
+pre .doctype,
+pre .shebang,
+pre .cdata {
+  color: #999;
+  font-weight: bold
+}
+
+pre .deletion {
+  background: #fdd
+}
+
+pre .addition {
+  background: #dfd
+}
+
+pre .diff .change {
+  background: #0086b3
+}
+
+pre .chunk {
+  color: #aaa
+}
+
+body {
+  background-color: #222;
+  color: #eee;
+}
+
+h1, h3 {
+  font-family: Impact;
+  font-weight: bold;
+}
+
+pre code {
+  color: #ccc;
+  font-size: 140%;
+}
+
+.keyword {
+  color: #0086b3 !important;
+  font-weight: inherit !important;
+}
+
+.tag {
+  color: #900 !important;
+}
+
+code {
+  background-color: inherit;
+}
+
+em {
+  border-bottom: 1px solid #666;
+}
+
+  </style>
+</head>
+<body>
+    <div class="progress">
+    <div class="progress-bar"></div>
+  </div>
+
+  <div class="slide" id="slide-1">
+    <section class="slide-content"><style type="text/css">
+body {
+    overflow:hidden;
+}
+
+.bgimg {
+    background-image: url(./img/galaxy.jpg);
+}
+</style>
+
+<div class="bgimg">
+    <div align="center">
+        <br />
+        <br />
+        <br />
+        <object data="./img/logo_white.svg" type="image/svg+xml" width="400">
+        </object>
+        <br />
+        <span style="font-size: 40px">
+            學生計算機年會<br />
+        </span>
+        <span style="font-size:16px">
+            Students&#39; Information Technology Conference
+        </span>
+        <br />
+        <br />
+        <span style="font-size: 24px">學生與創新實作</span>
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+</div></section>
+  </div>
+  <div class="slide hidden" id="slide-2">
+    <section class="slide-content"><p><h2 style="font-size: 48px">
+    總召
+</h2>
+<br /></p>
+<div align="center" style="font-size: 78px">
+    Denny Huang
+</div></section>
+  </div>
+  <div class="slide hidden" id="slide-3">
+    <section class="slide-content"><p><h2 style="font-size: 48px">
+    平凡的總召
+</h2>
+<br /></p>
+<div align="center" style="font-size: 78px">
+    Denny Huang
+</div></section>
+  </div>
+  <div class="slide hidden" id="slide-4">
+    <section class="slide-content"><h1 style="font-size: 60px">
+    <a href="http://me.sitcon.org/">
+    <a href="http://me.sitcon.org/">http://me.sitcon.org/</a>
+    </a>
+</h1></section>
+  </div>
+  <div class="slide hidden" id="slide-5">
+    <section class="slide-content"><h2 style="font-size: 70px">IRC</h2>
+
+<p><br /></p>
+<li>
+    <h2 style="font-size: 40px">#SITCON@irc.freenode.net</h2>
+</li>
+<li>
+    <h2 style="font-size: 40px">
+        <a herf="http://sitcon.org/webchat">
+            <a href="http://sitcon.org/webchat">http://sitcon.org/webchat</a>
+        </a>
+    </h2>
+</li></section>
+  </div>
+  <div class="slide hidden" id="slide-6">
+    <section class="slide-content"><p><br /></p>
+<h2 style="font-size: 70px">
+    座位表
+    <span style="font-size: 36px">By Takeshi</span>
+</h2>
+
+<p><br /></p>
+<h2 style="font-size: 40px">
+    <a herf="http://seat.sitcon.org/">
+        <a href="http://seat.sitcon.org/">http://seat.sitcon.org/</a>
+    </a>
+</h2></section>
+  </div>
+  <div class="slide hidden" id="slide-7">
+    <section class="slide-content"><h1 id="sitcon-">SITCON?</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-8">
+    <section class="slide-content"><h1 id="-">除了年會？</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-9">
+    <section class="slide-content"><p><br /></p>
+<p><div align="center">
+    <img src="./img/HackGen_Logo.png" style="width: 350px">
+</img></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-10">
+    <section class="slide-content"><p><img src="./img/hackgen-nccu.jpg"></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-11">
+    <section class="slide-content"><p><img src="./img/hackgen-ttu.jpg"></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-12">
+    <section class="slide-content"><h3 id="workshop">Workshop</h3>
+<ul>
+<li>HackGen Workshop - 歡迎來到 GitHub 新手村（政大場）</li>
+<li>HackGen Workshop - 歡迎來到 GitHub 新手村（大同場）</li>
+<li>SITCON Workshop @ NTUST: Titanium Mobile 進化攻防戰 - Alloy MVC</li>
+<li>The Open Source Way 開源之道工作坊 - Promoter</li>
+<li>The Open Source Way 開源之道工作坊 - Coder</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-13">
+    <section class="slide-content"><p><img src="./img/tosw1.jpg"></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-14">
+    <section class="slide-content"><p><img src="./img/tosw2.jpg"></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-15">
+    <section class="slide-content"><p><img src="./img/tosw3.jpg"></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-16">
+    <section class="slide-content"><h3 id="-">取得最新消息</h3>
+<ul>
+<li>Facebook 粉絲團 - SITCON 學生計算機年會<br/ >
+<a href="https://www.facebook.com/SitconTW">https://www.facebook.com/SitconTW</a><br />
+<br /></li>
+<li>Facebook 社團 - 學生計算機年會（SITCON）交流區<br />
+<a href="https://www.facebook.com/groups/sitcon.tw/">https://www.facebook.com/groups/sitcon.tw/</a><br />
+<br /></li>
+<li>Mailing list (SITCON：日常- Google Groups)<br />
+<a href="https://groups.google.com/d/forum/sitcon-general">https://groups.google.com/d/forum/sitcon-general</a></li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-17">
+    <section class="slide-content"><h3 id="sitcon-2014">SITCON 2014</h3>
+<p><img src="./img/reg-status.png"></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-18">
+    <section class="slide-content"><h3 id="-">各校人數統計排名</h3>
+<table width="400" align="center">
+<tr align="center">
+<th>排名</th>
+<th>人數</th>
+<th>學校名稱</th>
+</tr>
+<tr align="center">
+<td>
+    1
+    </td>
+    <td>61
+    </td>
+    <td>台灣科技大學</td>
+    </tr>
+    <tr align="center">
+<td>
+    2
+    </td>
+    <td>37
+    </td>
+    <td>元智大學</td>
+    </tr>
+    <tr align="center">
+<td>
+    3
+    </td>
+    <td>35
+    </td>
+    <td>交通大學</td>
+    </tr>
+    <tr align="center">
+<td>
+    4
+    </td>
+    <td>27
+    </td>
+    <td>台灣大學</td>
+    </tr>
+    <tr align="center">
+<td>
+    5
+    </td>
+    <td>21
+    </td>
+    <td>淡江大學</td>
+    </tr>
+    <tr align="center">
+<td>
+    6
+    </td>
+    <td>21
+    </td>
+    <td>大同大學</td>
+    </tr>
+    <tr align="center">
+<td>
+    7
+    </td>
+    <td>18
+    </td>
+    <td>中央大學</td>
+    </tr>
+    <tr align="center">
+<td>
+    8
+    </td>
+    <td>17
+    </td>
+    <td>中央大學</td>
+    </tr>
+    <tr align="center">
+<td>
+    9
+    </td>
+    <td>14
+    </td>
+    <td>輔仁大學</td>
+    </tr>
+    <tr align="center">
+<td>
+    10
+    </td>
+    <td>12
+    </td>
+    <td>東海大學</td>
+    </tr>
+</table></section>
+  </div>
+  <div class="slide hidden" id="slide-19">
+    <section class="slide-content"><h3 id="-">主辦單位</h3>
+<p><br />
+<br /></p>
+<table width="800" align="center">
+<tr align="center">
+    <td>
+        <object data="./img/logo_white.svg" type="image/svg+xml" width="300">
+    </td>
+    <td>
+        <img src="./img/ossf_logo.png" style="width: 300px"/>
+    </td>
+</tr>
+<tr align="center">
+    <td>
+        SITCON 學生計算機年會
+    </td>
+    <td>
+        中研院 資創中心 自由軟體鑄造場
+    </td>
+</tr>
+</table></section>
+  </div>
+  <div class="slide hidden" id="slide-20">
+    <section class="slide-content"><h3 id="-">協辦單位</h3>
+<p><br /></p>
+<div align="center">
+    <img src="./img/itsa_logo.png" style="width: 250px; background-color: white;"/><br />
+    ITSA 教育部 資訊軟體人才培育計畫
+</div></section>
+  </div>
+  <div class="slide hidden" id="slide-21">
+    <section class="slide-content"><h3 id="-">贊助單位</h3>
+<p><br />
+特別感謝 - 華禎有限公司</p>
+<table width="800" align="center">
+<tr align="center">
+    <td>
+        <img src="./img/archilife.png" style="width: 200px"/>
+    </td>
+    <td>
+        <img src="./img/kktix.png" style="width: 200px"/>
+    </td>
+    <td>
+        <img src="./img/justfont.png" style="width: 200px"/>
+    </td>
+</tr>
+<tr align="center">
+    <td>
+        祐生研究基金會
+    </td>
+    <td>
+        KKTIX 售票亭
+    </td>
+    <td>
+        justfont 就是字
+    </td>
+</tr>
+</table></section>
+  </div>
+  <div class="slide hidden" id="slide-22">
+    <section class="slide-content"><h1 id="-">議程</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-23">
+    <section class="slide-content"><h3 id="keynote">Keynote</h3>
+<ul>
+<li><p>鄭永斌 教授<br />
+台灣資訊工程教育的沉痾，創新，與改革</p>
+</li>
+<li><p>陳鍾誠 教授<br />
+程式人的寫作與出版 -- 關於「程式人雜誌」的一些經驗分享</p>
+</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-24">
+    <section class="slide-content"><h1 id="talk-short-talk">Talk / Short Talk</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-25">
+    <section class="slide-content"><h3 id="-">座談會 - 學生與實作能力</h3>
+<ul>
+<li>Richard Lee</li>
+<li>陳鍾誠 教授</li>
+<li>鄭永斌 教授</li>
+<li>郭耀煌 教授</li>
+<li>林旅強 (Richard Lin)</li>
+<li>jserv</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-26">
+    <section class="slide-content"><h1 id="-">主題沙龍</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-27">
+    <section class="slide-content"><h1 id="lightning-talk">Lightning Talk</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-28">
+    <section class="slide-content"><h1 id="lightning-talk">Lightning Talk</h1>
+<p><br /></p>
+<h2 id="10-00-">10:00 在白板區開放報名</h2>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-29">
+    <section class="slide-content"><h3 id="-">注意事項</h3>
+<ul>
+<li>手機關機或調為振動</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-30">
+    <section class="slide-content"><h3 id="-">注意事項</h3>
+<ul>
+<li>手機關機或調為振動</li>
+<li>大會提供錄音錄影</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-31">
+    <section class="slide-content"><h3 id="-">注意事項</h3>
+<ul>
+<li>手機關機或調為振動</li>
+<li>大會提供錄音錄影</li>
+<li>發問用現場麥克風</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-32">
+    <section class="slide-content"><h3 id="-">注意事項</h3>
+<ul>
+<li>手機關機或調為振動</li>
+<li>大會提供錄音錄影</li>
+<li>發問用現場麥克風</li>
+<li>會議廳內禁止飲食</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-33">
+    <section class="slide-content"><h3 id="-">注意事項</h3>
+<ul>
+<li>手機關機或調為振動</li>
+<li>大會提供錄音錄影</li>
+<li>發問用現場麥克風</li>
+<li>會議廳內禁止飲食</li>
+<li>進出會議室請配戴識別證</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-34">
+    <section class="slide-content"><div align="center">
+    <img src="./img/badge.png" style="width: 350px"/>
+</div></section>
+  </div>
+  <div class="slide hidden" id="slide-35">
+    <section class="slide-content"><h3 id="-">注意事項</h3>
+<ul>
+<li>手機關機或調為振動</li>
+<li>大會提供錄音錄影</li>
+<li>發問用現場麥克風</li>
+<li>會議廳內禁止飲食</li>
+<li>進出會議室請配戴識別證</li>
+<li>請勿以物品佔用座位</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-36">
+    <section class="slide-content"><h3 id="-">注意事項</h3>
+<ul>
+<li>手機關機或調為振動</li>
+<li>大會提供錄音錄影</li>
+<li>發問用現場麥克風</li>
+<li>會議廳內禁止飲食</li>
+<li>進出會議室請配戴識別證</li>
+<li>請勿以物品佔用座位</li>
+<li>遺失物請找詢問台</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-37">
+    <section class="slide-content"><h3 id="-">注意事項</h3>
+<ul>
+<li>手機關機或調為振動</li>
+<li>大會提供錄音錄影</li>
+<li>發問用現場麥克風</li>
+<li>會議廳內禁止飲食</li>
+<li>進出會議室請配戴識別證</li>
+<li>請勿以物品佔用座位</li>
+<li>遺失物請找詢問台</li>
+<li>遵守場地指示</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-38">
+    <section class="slide-content"><h3 id="-">注意事項</h3>
+<ul>
+<li>手機關機或調為振動</li>
+<li>大會提供錄音錄影</li>
+<li>發問用現場麥克風</li>
+<li>會議廳內禁止飲食</li>
+<li>進出會議室請配戴識別證</li>
+<li>請勿以物品佔用座位</li>
+<li>遺失物請找詢問台</li>
+<li>遵守場地指示</li>
+<li>用餐桌椅不足 分兩次領餐</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-39">
+    <section class="slide-content"><h3 id="-">注意事項</h3>
+<ul>
+<li>手機關機或調為振動</li>
+<li>大會提供錄音錄影</li>
+<li>發問用現場麥克風</li>
+<li>會議廳內禁止飲食</li>
+<li>進出會議室請配戴識別證</li>
+<li>請勿以物品佔用座位</li>
+<li>遺失物請找詢問台</li>
+<li>遵守場地指示</li>
+<li>用餐桌椅不足 分兩次領餐</li>
+<li>請節省使用免洗杯 重複使用</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-40">
+    <section class="slide-content"><h1 id="-br-">注意事項 -<br ></h1>
+<h2 style="font-size: 60px">
+    About Network
+</h2></section>
+  </div>
+  <div class="slide hidden" id="slide-41">
+    <section class="slide-content"><p><br />
+<br />
+<br /></p>
+<h2 style="font-size: 48px">
+    請勿自行架設無線網路基地台
+</h2></section>
+  </div>
+  <div class="slide hidden" id="slide-42">
+    <section class="slide-content"><h2 style="font-size: 42px">
+
+<br />
+<br />
+    SITCON / HITCON 只差一字<br />
+<br />
+    請不要看錯 嚴禁任何類型的網路攻擊
+</h2></section>
+  </div>
+  <div class="slide hidden" id="slide-43">
+    <section class="slide-content"><h1 id="-">好好享受精彩的一天吧！</h1>
+</section>
+  </div>
+
+  <div class="controls">
+    <div class="arrow prev"></div>
+    <div class="arrow next"></div>
+  </div>
+
+
+  <script type="text/javascript">
+    /**
+ * Returns the current page number of the presentation.
+ */
+function currentPosition() {
+  return parseInt(document.querySelector('.slide:not(.hidden)').id.slice(6));
+}
+
+
+/**
+ * Navigates forward n pages
+ * If n is negative, we will navigate in reverse
+ */
+function navigate(n) {
+  var position = currentPosition();
+  var numSlides = document.getElementsByClassName('slide').length;
+
+  /* Positions are 1-indexed, so we need to add and subtract 1 */
+  var nextPosition = (position - 1 + n) % numSlides + 1;
+
+  /* Normalize nextPosition in-case of a negative modulo result */
+  nextPosition = (nextPosition - 1 + numSlides) % numSlides + 1;
+
+  document.getElementById('slide-' + position).classList.add('hidden');
+  document.getElementById('slide-' + nextPosition).classList.remove('hidden');
+
+  updateProgress();
+  updateURL();
+  updateTabIndex();
+}
+
+
+/**
+ * Updates the current URL to include a hashtag of the current page number.
+ */
+function updateURL() {
+  window.history.replaceState({} , null, '#' + currentPosition());
+}
+
+
+/**
+ * Sets the progress indicator.
+ */
+function updateProgress() {
+  var progressBar = document.querySelector('.progress-bar');
+
+  if (progressBar !== null) {
+    var numSlides = document.getElementsByClassName('slide').length;
+    var position = currentPosition() - 1;
+    var percent = (numSlides === 1) ? 100 : 100 * position / (numSlides - 1);
+    progressBar.style.width = percent.toString() + '%';
+  }
+}
+
+
+/**
+ * Removes tabindex property from all links on the current slide, sets
+ * tabindex = -1 for all links on other slides. Prevents slides from appearing
+ * out of control.
+ */
+function updateTabIndex() {
+  var allLinks = document.querySelectorAll('.slide a');
+  var position = currentPosition();
+  var currentPageLinks = document.getElementById('slide-' + position).querySelectorAll('a');
+  var i;
+
+  for (i = 0; i < allLinks.length; i++) {
+    allLinks[i].setAttribute('tabindex', -1);
+  }
+
+  for (i = 0; i < currentPageLinks.length; i++) {
+    currentPageLinks[i].removeAttribute('tabindex');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Update the tabindex to prevent weird slide transitioning
+  updateTabIndex();
+
+  // If the location hash specifies a page number, go to it.
+  var page = window.location.hash.slice(1);
+  if (page) {
+    navigate(parseInt(page) - 1);
+  }
+
+  document.onkeydown = function (e) {
+    var kc = e.keyCode;
+
+    // left, down, H, J, backspace, PgUp - BACK
+    // up, right, K, L, space, enter, PgDn - FORWARD
+    if (kc === 37 || kc === 40 || kc === 8 || kc === 72 || kc === 74 || kc === 33) {
+      navigate(-1);
+    } else if (kc === 38 || kc === 39 || kc === 13 || kc === 32 || kc === 75 || kc === 76 || kc === 34) {
+      navigate(1);
+    }
+  };
+
+  if (document.querySelector('.next') && document.querySelector('.prev')) {
+    document.querySelector('.next').onclick = function (e) {
+      e.preventDefault();
+      navigate(1);
+    };
+
+    document.querySelector('.prev').onclick = function (e) {
+      e.preventDefault();
+      navigate(-1);
+    };
+  }
+});
+
+
+  </script>
+</body>
+</html>

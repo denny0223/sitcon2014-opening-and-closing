@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>Index</title>
+
+    <script type="text/javascript" charset="utf-8">
+
+      window.onload = function(){
+        i = 0;
+        img = document.getElementById('img');
+        path = img.src;
+        window.setTimeout(chimg, 3000);
+      };
+
+      function chimg() {
+        i++;
+
+        if (i > 5) {
+          window.location="./main.html";
+        }
+
+        else {
+          img.src = path.replace(/\d/g, i.toString());
+          path = img.src;
+
+          window.setTimeout(chimg, 1500);
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+    <div align="center">
+      <img id="img" src="./SITCON_most0.jpg" />
+    </div>
+  </body>
+</html>
