@@ -32,7 +32,7 @@
         }
 
         else {
-          img.src = path.replace(/\d/g, i.toString());
+          img.src = path.replace(/\d(?=[^\d]*$)/, i.toString());
           path = img.src;
 
           window.setTimeout(chimg, 1500);
